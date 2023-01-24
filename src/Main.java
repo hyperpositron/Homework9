@@ -13,16 +13,27 @@ public class Main {
 
     public static void main(String[] args) {
         task1();
+        task2();
     }
 
     public static void task1() {
         System.out.println("___________________________________________Задача 1______________________________________");
+
         int[] arr = generateRandomArray();
         int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+//        System.out.println(Arrays.toString(arr));
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+    }
+
+    public static void task2() {
+        System.out.println("___________________________________________Задача 2______________________________________");
+        int[] arr = generateRandomArray();
         int min = 999999;
         int max = 0;
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
             if (arr[i] < min) {
                 min = arr[i];
             }
@@ -30,7 +41,9 @@ public class Main {
                 max = arr[i];
             }
         }
-        System.out.println(Arrays.toString(arr));
-        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+//        System.out.println(Arrays.toString(arr));
+
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
+        System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
     }
 }
