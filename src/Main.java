@@ -1,6 +1,3 @@
-import javax.imageio.metadata.IIOMetadataFormatImpl;
-import java.util.Arrays;
-
 public class Main {
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -14,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
@@ -45,5 +43,17 @@ public class Main {
 
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
+    }
+
+    public static void task3() {
+        System.out.println("___________________________________________Задача 3______________________________________");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+//            System.out.println(sum);
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + sum / arr.length + " рублей");
     }
 }
